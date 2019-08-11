@@ -1,6 +1,6 @@
 ## Task
 
-```Implement a function named factorial that has one parameter: n an integer. It must return the value of n! (n factorial).```
+Implement a function named factorial that has one parameter: n an integer. It must return the value of n! (n factorial).
 
 ### Input Format
 
