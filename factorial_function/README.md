@@ -2,20 +2,18 @@
 
 `Implement a function named factorial that has one parameter: an integer, . It must return the value of  (i.e.,  factorial).`
 
-## Input Format
+### Input Format
 
-`single Number n`
+single Number _n_
 
-Constraints
+### Output Format
 
-## Output Format
-
-`Function must return the value of n factorial`
+Function must return the value of _n_ factorial
 
 ### Sample Input
 4
-## Sample Output
+### Sample Output
 24
-## Explanation
+### Explanation
 n = 4\
 4 * 3 * 2 * 1 = 24
