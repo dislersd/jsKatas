@@ -3,19 +3,19 @@
 1. Declare a constant variable, *_PI_*, and assign it the value Math.PI. 
 2. Read a number, *_r_*, denoting the radius of a circle.
 Use *_PI_* and *_r_* to calculate the area and  of perimeter of a circle having radius *_r_*.
-3. Print *_area_* as the first line of output and print *_perimeter_* as the second line of output.
+3. Return an object with properties *_area_* and *_perimeter_*
 
 ### Input Format
 
-single Number _n_, denoting the radius of a circle
+single Number _r_, denoting the radius of a circle
 
 ### Output Format
-
-Two lines:
-
-1. area
-2. perimeter
-
+```
+{
+    area: Number,
+    perimeter: Number
+}
+```
 ### Sample Input
 ```
 2.6
