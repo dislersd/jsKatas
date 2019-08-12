@@ -5,9 +5,9 @@ function areaAndPerimeter(r) {
   const perimeter = 2 * PI * r;
 
   return {
-      area,
-      perimeter
-  }
+    area,
+    perimeter
+  };
 }
 
-console.log(areaAndPerimeter(2.6))
+console.log(areaAndPerimeter(2.6));
