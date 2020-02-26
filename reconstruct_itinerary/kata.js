@@ -1,3 +1,4 @@
+// creating a defaultDict like the one from python collection
 function defDict(type) {
   const dict = {};
   return {
@@ -48,5 +49,44 @@ reconstructItinerary([
   ["ANU", "TIA"],
   ["SEA", "TIA"]
 ]);
-
 // Returns ["SEA", "ANU", "EZE", "AXA", "TIA", "ANU", "SEA", "TIA", "ANU", "TIA", "SEA"];
+
+// Implementation without defaultdict
+function reconItinerary(tix) {
+  const trips = {};
+  const orderedTrip = [];
+  for (let cities of tix) {
+    if (trips[cities[0]]) {
+      trips[cities[0]] = [...trips[cities[0]], cities[1]].sort().reverse();
+    } else {
+      trips[cities[0]] = [cities[1]];
+    }
+  }
+
+  const dfs = (graph, source, result) => {
+    while (graph[source].length > 0) {
+      let newSource = graph[source].pop();
+      dfs(graph, newSource, result);
+    }
+    result.push(source);
+  };
+
+  dfs(trips, "SEA", orderedTrip);
+
+  return orderedTrip.reverse();
+}
+
+console.log(
+  reconItinerary([
+    ["EZE", "AXA"],
+    ["TIA", "ANU"],
+    ["ANU", "SEA"],
+    ["SEA", "ANU"],
+    ["ANU", "EZE"],
+    ["TIA", "ANU"],
+    ["AXA", "TIA"],
+    ["TIA", "SEA"],
+    ["ANU", "TIA"],
+    ["SEA", "TIA"]
+  ])
+);
