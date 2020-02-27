@@ -57,7 +57,7 @@ function reconItinerary(tix) {
   const orderedTrip = [];
   for (let cities of tix) {
     if (trips[cities[0]]) {
-      trips[cities[0]] = [...trips[cities[0]], cities[1]].sort().reverse();
+      trips[cities[0]] = [...trips[cities[0]], cities[1]].sort();
     } else {
       trips[cities[0]] = [cities[1]];
     }
@@ -65,7 +65,7 @@ function reconItinerary(tix) {
 
   const dfs = (graph, source, result) => {
     while (graph[source].length > 0) {
-      let newSource = graph[source].pop();
+      let newSource = graph[source].shift();
       dfs(graph, newSource, result);
     }
     result.push(source);
