@@ -17,4 +17,4 @@ const twoDeeArray = [
   [4, 5, 6],
   [10, 8, -12]
 ];
-console.log(diagonalDifference(twoDeeArray)); // => 15
+console.log(diagonalDifference(twoDeeArray)); // => 15 (11 + 5 + -12 = 4) (4 + 5 + 10 = 19) 4 - 19 = 15
