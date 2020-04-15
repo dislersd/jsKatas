@@ -25,6 +25,23 @@ const moveZeroesInPlace1 = function (nums) {
   return nums;
 };
 
+// moves zeros in place!
+function moveZeroesInPlace2 (nums) {
+  let sorted = false 
+  while (sorted === false) {
+    sorted = true
+    for (let i = 0; i < nums.length - 1; i++) {
+      if (nums[i] === 0 && nums[i + 1] !== 0) {
+        [nums[i], nums[i + 1]] = [nums[i + 1], nums[i]]
+        sorted = false
+      }
+    }
+  }
+  return nums
+}
+
 console.log(moveZeroes([0, 1, 0, 3, 12])); // => [1,3,12,0,0]
 
 console.log(moveZeroesInPlace1([0, 1, 0, 3, 12])); // => [3,1,12,0,0]
+
+console.log(moveZeroesInPlace2([0, 1, 0, 3, 12])); // => [1,3,12,0,0]
