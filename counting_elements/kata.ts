@@ -8,4 +8,4 @@ function countElements (nums: Array<number>) {
   return numCount
 }
 
-console.log(countElements([1,2,3]))
+console.log(countElements([1,2,3])) // => 2
