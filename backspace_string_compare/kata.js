@@ -11,9 +11,6 @@ const backspace = (s, t) => {
     tArr.shift();
   }
 
-  console.log(sArr.join(""));
-  console.log(tArr.join(""));
-
   for (let i = 0; i < Math.max(sArr.length, tArr.length); i++) {
     if (sArr[i] === "#") {
       sArr.splice(i - 1, 2);
@@ -70,4 +67,4 @@ const backspaceBetter = (S, T) => {
 };
 
 console.log(backspace("a##c", "#a#c")); // => true
-console.log(backspaceBetter("a###cf", "#a#cf"));
+console.log(backspaceBetter("a###cf", "#a#cf")); // => true
