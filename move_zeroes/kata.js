@@ -42,7 +42,6 @@ function moveZeroesInPlace2(nums) {
 
 
 function moveZeroes3 (nums) {
-  debugger
   let len = nums.length;
   for(let i = 0; i < len; i++) {
       if (nums[i] === 0) {
